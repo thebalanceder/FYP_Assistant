@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="AI Engineering Week 2" version="24.7.17">
+  <diagram id="fyp" name="FYP Assistant V1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="FYP ASSISTANT - V1 CONCEPTUAL ARCHITECTURE" style="text;html=1;align=left;fontSize=22;fontStyle=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="1100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="USER&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;FYP1 / FYP2 student&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#64748b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="21" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="APPLICATION&lt;br&gt;INTERFACE&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;chat UI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#64748b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="177" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="SCOPE / SAFETY&lt;br&gt;CONTROL&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;refuse out-of-scope&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#ea580c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="333" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="retrieval" value="RETRIEVAL /&lt;br&gt;KNOWLEDGE ACCESS&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;top-k sections&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="489" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lm" value="LANGUAGE MODEL&lt;br&gt;SERVICE&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;grounded generation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grounding" value="GROUNDING /&lt;br&gt;CITATION CONTROL&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;attach refs; flag gaps&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#ea580c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="801" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="response" value="RESPONSE /&lt;br&gt;OUTPUT&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;answer + citations&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#64748b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="957" y="156" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="knowledge" value="KNOWLEDGE SOURCE&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;FYP Handbook 2026-2027&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="489" y="315" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="privacy" value="PRIVACY / PII&lt;br&gt;FILTER&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;no PII to external API&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#ea580c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="315" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eval" value="EVALUATION POINT&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;logs query, retrieved sources, and response&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8ff;strokeColor=#9333ea;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="444" y="477" width="372" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="user-ui" value="question" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="user" target="ui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-scope" value="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="ui" target="scope">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scope-retrieval" value="in-scope" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="scope" target="retrieval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="retrieval-lm" value="sections" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="retrieval" target="lm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lm-grounding" value="draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="lm" target="grounding">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grounding-response" value="cited answer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="grounding" target="response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="knowledge-retrieval" value="indexed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" edge="1" parent="1" source="knowledge" target="retrieval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="privacy-lm" value="PII check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;dashed=1;" edge="1" parent="1" source="privacy" target="lm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-eval" value="queries" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;dashed=1;" edge="1" parent="1" source="ui" target="eval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="response-eval" value="logged responses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;dashed=1;" edge="1" parent="1" source="response" target="eval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="response-user" value="answer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;dashed=1;" edge="1" parent="1" source="response" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
