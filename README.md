@@ -33,3 +33,34 @@ Final-year undergraduate students navigating FYP processes, milestones, and dead
 | Week | Focus | Deliverable | Status |
 |------|-------|-------------|--------|
 | W1 | System map + project scope | README + docs | ✅ |
+| W2 | Requirements, evaluation criteria, V1 architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_v1.png`, `docs/week2_architecture_decisions.md` | ✅ |
+| W3 | Data engineering: inventory, V1 data pipeline, lineage | `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, `docs/week3_pipeline_diagram.png`, `notebooks/week3_pipeline.ipynb`, `data/week3_manifest.json`, `data/pipeline_v1/documents/` | ✅ Part A + B + C |
+
+## Week 3 — Data Pipeline
+
+**Pathway:** A (PDF / text) only — the project corpus is the FYP Handbook, and no Topic 2
+requirement consumes tabular, image, JSON, audio or time-series data.
+
+**Ingestion scope (V1):** Handbook pp. 7–28 (Ch. 1 — phases, registration, logbook) and
+pp. 30–44 (Ch. 3 — report structure, page limits, Harvard). Chapters 4–9 and the appendices
+are deferred; see `docs/week3_data_inventory.md` §4.
+
+**Prepared output:** 90 records, mean 628 chars, **100% carrying a page number** so answers
+can cite the handbook. Chunking was selected by measurement, not preference — the lab's
+default blank-line chunker produced 132 fragments (min 13 chars) because `pypdf` emits no
+blank lines; a page-bound chunker cut mid-sentence chunks from 97% to 67%. Full comparison
+in `docs/week3_pipeline_decisions.md` §3.
+
+**Executable pipeline:** Cells 7–9 register the preparation as a re-runnable pipeline and
+re-execute it to prove repeatability — `PASS: documents`, with a byte-identical chunk
+sequence to the Part B output. Diagram: `docs/week3_pipeline_diagram.png`.
+
+**Lineage:** `data/week3_manifest.json` records the source SHA-256, prepared SHA-256 and the
+exact processing string (Part B). `data/pipeline_v1/documents/pipeline_manifest.json`
+records the pipeline execution — configuration, source/output hashes, mapping and
+repeatability evidence (Part C).
+
+> The two `prepared_text.jsonl` files are git-ignored because they contain verbatim
+> handbook text; `data/processed/prepared_text_sample.jsonl` holds 5 truncated records as
+> schema evidence. See `docs/week3_pipeline_decisions.md` §6.
+

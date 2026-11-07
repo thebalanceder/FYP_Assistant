@@ -1,0 +1,57 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-07T10:59:35.714730+00:00",
+  "data_type": "documents",
+  "configuration": {
+    "chunk_size": 800,
+    "method": "paragraph-aware-page",
+    "page_ranges": [
+      [
+        7,
+        28
+      ],
+      [
+        30,
+        44
+      ]
+    ]
+  },
+  "processing_method": "paragraph-aware text chunks of 800 characters, page-bound; pages=[[7, 28], [30, 44]]",
+  "sources": [
+    {
+      "path": "data/raw/FYP_Handbook.pdf",
+      "sha256": "38ad807bc75cb9b4fde41aa3454b0b653e4fd4703d0b0ed66595a4dd6bbe30ca"
+    }
+  ],
+  "outputs": [
+    "data/pipeline_v1/documents/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "data/raw/FYP_Handbook.pdf",
+      "output": "data/pipeline_v1/documents/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "FYP_Handbook.pdf",
+    "pages_total": 119,
+    "pages_in_scope": 37,
+    "pages_without_text": [
+      10,
+      16,
+      18
+    ],
+    "characters_in_scope": 57749
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "15cd7683d4dc87a8b97fbe06cb950e4f6dd1d1c570aa8c90361e259ec4c2dc25"
+    ],
+    "output_bytes": [
+      64666
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}

@@ -2,3 +2,16 @@
 FYP Handbook.pdf
 Topic 1_Lab.docx
 Topic 2_Lab.docx
+Topic 3_Lab.docx
+
+# Topic 3 optional practice pack — not project data, not used by the pipeline
+topic3_dummy_datasets/
+
+# Week 3: the prepared corpus is verbatim handbook text — keep it local and commit
+# the truncated sample (data/processed/prepared_text_sample.jsonl) instead.
+# See docs/week3_pipeline_decisions.md §5 for the trade-off and how to reverse it.
+data/processed/prepared_text.jsonl
+data/pipeline_v1/*/prepared_text.jsonl
+
+# Local tooling state and the Colab run workspace (contains a copy of the source PDF)
+.workbuddy-ai/

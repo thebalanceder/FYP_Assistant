@@ -1,0 +1,17 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-07T10:58:37.479957+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "FYP_Handbook.pdf",
+      "source_sha256": "38ad807bc75cb9b4fde41aa3454b0b653e4fd4703d0b0ed66595a4dd6bbe30ca",
+      "prepared_output": "data\\processed\\prepared_text.jsonl",
+      "prepared_sha256": "7d28fa45e969436896d928c36f2978e7a909e1b6b00e12f11c8ff1908f268f62",
+      "processing_note": "paragraph-aware-char-800-page-bound; pages=7-28,30-44; collapse_duplicate_text_layers=True; drop_adjacent_duplicate_lines=True; whitespace_normalised=True",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    }
+  ]
+}
