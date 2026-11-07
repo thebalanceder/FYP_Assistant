@@ -1,6 +1,6 @@
 {
   "pipeline_version": "week3-v1",
-  "generated_at_utc": "2026-11-07T10:59:35.714730+00:00",
+  "generated_at_utc": "2026-11-07T15:58:22.691098+00:00",
   "data_type": "documents",
   "configuration": {
     "chunk_size": 800,
@@ -52,6 +52,6 @@
       64666
     ]
   },
-  "source_version": "Not verified",
-  "access_rights": "Not verified — check before sharing"
+  "source_version": "Handbook FYP BAI 20262027; PDF created 2026-10-08; issued by UTM Faculty of Artificial Intelligence",
+  "access_rights": "Course-provided; local use only; not redistributable. Source held outside the public repository."
 }

@@ -144,9 +144,10 @@ response to each.
 
 ## 6. Data rights trade-off
 
-`prepared_text.jsonl` contains 56,539 characters of verbatim handbook text. The repository
-is public and the handbook is course-provided, not redistributable — the same reason
-`FYP Handbook.pdf` is already in `.gitignore`.
+`prepared_text.jsonl` holds 90 records totalling 56,539 characters of verbatim handbook
+text — the 56,595 cleaned characters minus the separator newlines lost at chunk boundaries.
+The repository is public and the handbook is course-provided, not redistributable — the same
+reason `FYP Handbook.pdf` is already in `.gitignore`.
 
 | Option | Consequence |
 |---|---|
@@ -178,10 +179,11 @@ redistributable, so the prepared text is restricted data by that definition.
 | Non-sensitive evidence (committed) | `data/week3_manifest.json`, `data/pipeline_v1/documents/pipeline_manifest.json`, `data/processed/prepared_text_sample.jsonl` | Public repository |
 
 The committed evidence is sufficient to verify the withheld files without holding them:
-both manifests carry the source SHA-256, the output SHA-256, the record count and the
+both manifests carry the source SHA-256, the output SHA-256, the output byte size and the
 processing string, and Cell 9 re-derives the output and compares hashes. Reproducing the
 full file takes one run of `notebooks/week3_pipeline.ipynb` with the PDF in `data/raw/`;
-that run was already shown to be byte-identical to the Part B output.
+that run was already shown to be byte-identical to the Part B output, and the resulting
+record count (90) is printed by Cells 6B and 9.
 
 **To reverse this decision:** delete the two `prepared_text.jsonl` ignore lines in
 `.gitignore`, then `git add -f` the files. Make the repository private first if the
