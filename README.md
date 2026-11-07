@@ -26,8 +26,8 @@ Final-year undergraduate students navigating FYP processes, milestones, and dead
 
 ## Data Sources
 - FYP Handbook (course-provided PDF) — local copy in `/data`; not publicly committed.
-- Faculty FYP Guidelines webpage — [Add your faculty's public FYP guidelines URL]
-- University thesis / ethics submission guidelines — [Add public URL]
+- Faculty FYP Guidelines — https://drive.google.com/file/d/1bNFeGajgc-xN3ET21Ww8GRnMyiS0N8Ms/view
+- University thesis writing guidelines — https://drive.google.com/file/d/1L0lUVdK-Fpwnl5XJ7-tKKaf70Jk_j30n/view
 
 ## Weekly Progress
 | Week | Focus | Deliverable | Status |
