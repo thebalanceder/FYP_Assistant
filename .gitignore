@@ -3,15 +3,25 @@ FYP Handbook.pdf
 Topic 1_Lab.docx
 Topic 2_Lab.docx
 Topic 3_Lab.docx
+Topic 4_Lab.docx
+SAIA3113 AI Engineering - Proposal  Presentation Guideline.pdf
 
 # Topic 3 optional practice pack — not project data, not used by the pipeline
 topic3_dummy_datasets/
 
 # Week 3: the prepared corpus is verbatim handbook text — keep it local and commit
 # the truncated sample (data/processed/prepared_text_sample.jsonl) instead.
-# See docs/week3_pipeline_decisions.md §5 for the trade-off and how to reverse it.
+# See docs/week3_pipeline_decisions.md §6 for the trade-off and how to reverse it.
 data/processed/prepared_text.jsonl
 data/pipeline_v1/*/prepared_text.jsonl
+
+# Week 4: the hand-off and reviewed corpora are also verbatim handbook text. Keep them
+# local and commit only the truncated sample (data/prepared_chunks_sample.jsonl).
+# See docs/week4_data_quality_report.md §5.
+data/prepared_chunks.jsonl
+data/chunks.pkl
+data/prepared_chunks_clean.jsonl
+data/chunks_clean.pkl
 
 # Local tooling state and the Colab run workspace (contains a copy of the source PDF)
 .workbuddy-ai/

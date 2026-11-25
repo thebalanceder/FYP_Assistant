@@ -35,6 +35,8 @@ Final-year undergraduate students navigating FYP processes, milestones, and dead
 | W1 | System map + project scope | README + docs | ✅ |
 | W2 | Requirements, evaluation criteria, V1 architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_v1.png`, `docs/week2_architecture_decisions.md` | ✅ |
 | W3 | Data engineering: inventory, V1 data pipeline, lineage | `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, `docs/week3_pipeline_diagram.png`, `notebooks/week3_pipeline.ipynb`, `data/week3_manifest.json`, `data/pipeline_v1/documents/` | ✅ Part A + B + C |
+| W4 | Data quality, validation, coverage/bias, governance | `notebooks/week4_quality.ipynb`, `docs/week4_data_quality_report.md`, `docs/week4_validation_failures.csv`, `docs/week4_duplicate_review.csv`, `docs/week4_coverage_by_source.png`, `data/prepared_chunks_sample.jsonl` | ✅ Part A + B + C |
+| Proposal | Project proposal report + presentation | `docs/FYP_Assistant_Proposal_Report.docx`, `docs/FYP_Assistant_Presentation/FYP_Assistant_Presentation.pptx` | ✅ Draft (6 assessment components each) |
 
 ## Week 3 — Data Pipeline
 
@@ -63,4 +65,19 @@ repeatability evidence (Part C).
 > The two `prepared_text.jsonl` files are git-ignored because they contain verbatim
 > handbook text; `data/processed/prepared_text_sample.jsonl` holds 5 truncated records as
 > schema evidence. See `docs/week3_pipeline_decisions.md` §6.
+
+## Week 4 — Data Quality Gate
+
+**Gate decision: GO WITH CONDITIONS.** 90/90 chunks passed all structural rules (no missing,
+corrupt, stale, inconsistent or duplicate records). The only failures were four short
+heading fragments flagged by the `char_count >= 100` warning; each was checked against its
+source page and retained. Coverage: 50 chunks from Chapter 1 (FR1), 40 from Chapter 3 (FR2),
+**0 from the appendix forms (FR5)** — a genuine gap that must be scope-guarded until a
+layout-aware parser ingests pp. 95–119. Accuracy is marked N.V. and citation granularity is
+page-level, not section-level. Full evidence and the five attached conditions are in
+`docs/week4_data_quality_report.md` §8.
+
+> The Week 4 hand-off and reviewed corpora (`data/prepared_chunks*.jsonl`, `data/chunks*.pkl`)
+> are also git-ignored as verbatim handbook text; `data/prepared_chunks_sample.jsonl` holds
+> 8 truncated records as schema evidence.
 

@@ -1,0 +1,5 @@
+schema_context,column,check,check_number,failure_case,index
+Column,char_count,chunk shorter than 100 characters,0,31,7
+Column,char_count,chunk shorter than 100 characters,0,68,13
+Column,char_count,chunk shorter than 100 characters,0,56,16
+Column,char_count,chunk shorter than 100 characters,0,49,87
